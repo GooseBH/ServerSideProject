@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Art Club</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/MasterStyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="masterForm" runat="server">
+        <div class="container-fluid">
+            <header>
+                <div class="row">
+                    <div class="col-md-4">
+                        <asp:Image ID="ImgLogo" runat="server" ImageUrl="images/artClub.png" CssClass="imgLogo"
+                            Width="105" Height="105" />
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="list-inline">
+                            <li>
+                                <div class="input-group">
+                                    <asp:TextBox ID="TxtSearch" runat="server" CssClass="form-control txtSearch"></asp:TextBox><span class="input-group-btn">
+                                        <asp:Button ID="BtnSearch" runat="server" OnClick="BtnSearch_Click" Text="Search" CssClass="btn btn-default search" /></span>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:Button ID="BtnRegister" runat="server" Text="Register" CssClass="btn btn-default register" /></li>
+                            <li>
+                                <asp:Button ID="BtnLogin" runat="server" PostBackUrl="~/Login.aspx" Text="Login" CssClass="btn btn-default login" /></li>
+                        </ul>
+                    </div>
+                </div>
+                <br />
+                <div class="row-nav">
+
+
+
+
+                    <asp:SiteMapDataSource ID="SiteMapDataSourceMenu" runat="server" />
+                    <asp:Menu ID="NavMenu" runat="server" DataSourceID="SiteMapDataSourceMenu" StaticDisplayLevels="2"
+                        Orientation="Horizontal" StaticEnableDefaultPopOutImage="false">
+                        <StaticMenuItemStyle BorderStyle="Solid" BorderColor="#FFB84D" Width="5em" Height="2em" BackColor="LightGray"
+                            ForeColor="Black" />
+                        <DynamicMenuItemStyle VerticalPadding="0.5em" BorderStyle="Solid" BorderColor="Red" Width="5.1em"
+                            BackColor="Pink" ForeColor="ForestGreen" />
+                        <StaticSelectedStyle ForeColor="Black" />
+                        <DynamicSelectedStyle ForeColor="Black" />
+                    </asp:Menu>
+
+
+
+
+
+                </div>
+            </header>
+        </div>
+        <br />
+        <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <footer>
+                        <div id="footer">
+                            <h4><em><b>Share us on:</b></em></h4>
+                            <asp:Image ID="ImgFacebook" runat="server" ImageUrl="images/facebook.png" Width="45" Height="45" CssClass="iconImage" />
+                            <asp:Image ID="ImgInstagram" runat="server" ImageUrl="images/instagram.png" Width="45" Height="45" CssClass="iconImage" />
+                            <asp:Image ID="Imgtwitter" runat="server" ImageUrl="images/twitter.png" Width="45" Height="45" CssClass="iconImage" />
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

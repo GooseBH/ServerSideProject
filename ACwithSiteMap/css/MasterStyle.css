@@ -1,0 +1,34 @@
+﻿/*.image{
+    height: auto;
+}
+
+#BtnRegister,#BtnLogin,#BtnSearch{margin-right:6em; border-radius:4px;}
+
+.thumbnail{margin:1em 1em 0.5em 1em;}
+
+#outer {
+    width: 100%;
+    text-align: center;
+}
+.iconImage{margin:0.2em;padding:0.2em;}
+    */
+    
+.imgLogo { margin: 10px 0px 2px 30px;
+}
+
+#TxtSearch{width:12em;}
+
+.input-group {
+    margin:40px 90px 10px 120px;
+    padding: 0.3em;
+}
+/*.search{ margin: -46px 10px 10px -4px;
+    padding:0.3em;}*/
+.register {
+    margin: -54px 0px 10px 130px;
+    padding:0.3em;}
+.login{margin:-54px 5px 10px 5px;
+    padding:0.3em;}
+
+.row{background-color:#FFB84D;}
+.row-nav{background-color:lavender;}

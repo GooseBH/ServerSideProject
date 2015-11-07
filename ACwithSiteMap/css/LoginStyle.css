@@ -1,0 +1,25 @@
+﻿body {
+}
+#TxtUserName, #TxtPassword, #TxtEmail{height:2.1em; width:13em;}
+ .auto-style1 {
+             width: 100%;
+         }
+         .auto-style2 {
+             width: 88px;
+         }
+         .auto-style3 {
+             width: 88px;
+             text-align: right;
+         }
+         .auto-style4 {
+             text-align: right;
+             width: 315px;
+         }
+         .auto-style5 {
+             width: 315px;
+         }
+         tr > td
+        {
+          padding-bottom: 1em;
+          grid-row-align:center;
+        }
